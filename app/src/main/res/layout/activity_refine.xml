@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawwerlayoutsetting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="end"
+    tools:context=".MainActivity">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:background="@color/statusbar"
+                android:id="@+id/refinecl1"
+
+                android:layout_height="60dp"
+                >
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+
+                    android:src="@drawable/back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="27dp"
+                    android:text="Refine"
+                    android:textSize="22sp"
+                    android:textColor="@color/White"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/refinecl1"
+        >
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:text="Select Your Availability"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            tools:layout_editor_absoluteX="15dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/autocomplete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/statustext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Your Status"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/textView9"
+
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:background="@drawable/status_background"
+            android:text="Hi community! I am open to new connections  '😀'"
+            android:textSize="16dp"
+            android:paddingHorizontal="15dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/statustext" />
+
+        <TextView
+            android:id="@+id/characterCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="47/250"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/editText"
+            app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+        <TextView
+            android:id="@+id/distancetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Hyper Local Distance"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/statustext"
+
+            app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="25dp"
+            android:id="@+id/seekbarrefine"
+
+            app:layout_constraintTop_toBottomOf="@+id/distancetext">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/seekbartext"
+                android:textSize="15dp"
+                android:layout_marginLeft="11dp"
+                android:textColor="@color/Red"
+                android:textAlignment="center"
+                />
+
+            <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:maxWidth="100dp"
+
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="end"
+                >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 KM"
+                android:layout_weight="1"
+                android:textSize="14sp"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100 KM"
+                android:textSize="14sp"
+            />
+            </LinearLayout>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/purposetext"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="Select Purpose"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/distancetext"
+
+            app:layout_constraintTop_toBottomOf="@+id/seekbarrefine" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:id="@+id/purposecl1"
+            android:background="@drawable/button_selector"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@+id/purposetext"
+            app:layout_constraintTop_toBottomOf="@+id/purposetext">
+
+            <TextView
+                android:id="@+id/coffeetext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/select_purpose_bg"
+                android:padding="8dp"
+                android:text="Coffee"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/purposecl2"
+            android:layout_width="77dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/button_selector"
+            app:layout_constraintStart_toEndOf="@+id/purposecl1"
+            app:layout_constraintTop_toBottomOf="@+id/purposetext">
+
+            <TextView
+                android:id="@+id/businesstext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/select_purpose_bg"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Business"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/purposecl3"
+            android:layout_width="77dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/button_selector"
+            app:layout_constraintStart_toEndOf="@+id/purposecl2"
+            app:layout_constraintTop_toBottomOf="@+id/purposetext">
+
+            <TextView
+                android:id="@+id/hobbytext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/select_purpose_bg"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Hobbies"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/purposecl4"
+            android:layout_width="77dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/button_selector"
+            app:layout_constraintStart_toEndOf="@+id/purposecl3"
+            app:layout_constraintTop_toBottomOf="@+id/purposetext">
+
+            <TextView
+                android:id="@+id/friendshiptext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/select_purpose_bg"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Friendship"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/purposecl5"
+            android:layout_width="77dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_selector"
+            app:layout_constraintStart_toStartOf="@+id/purposecl1"
+            app:layout_constraintTop_toBottomOf="@+id/purposecl1">
+
+            <TextView
+                android:id="@+id/movietext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/select_purpose_bg"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Movies"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/purposecl6"
+            android:layout_width="77dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/button_selector"
+            app:layout_constraintStart_toEndOf="@+id/purposecl5"
+            app:layout_constraintTop_toBottomOf="@+id/purposecl1">
+
+            <TextView
+                android:id="@+id/dinnigtext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/select_purpose_bg"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Dinning"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/purposecl7"
+            android:layout_width="77dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/button_selector"
+            app:layout_constraintStart_toEndOf="@+id/purposecl6"
+            app:layout_constraintTop_toBottomOf="@+id/purposecl1">
+
+            <TextView
+                android:id="@+id/datingtext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/select_purpose_bg"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Dating"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/purposecl8"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/button_selector"
+            app:layout_constraintStart_toEndOf="@+id/purposecl7"
+            app:layout_constraintTop_toBottomOf="@+id/purposecl1">
+
+            <TextView
+                android:id="@+id/Matrimonytext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/select_purpose_bg"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Matrimony"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/statusbar"
+            android:text="Save &amp; Explore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/purposecl7" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</RelativeLayout>
+
+
+    <!-- Save Button -->
+

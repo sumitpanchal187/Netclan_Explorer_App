@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativelayoutfb"
+    tools:context=".PersonalFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/searchbartext"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:visibility="visible"
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="15dp">
+
+
+        <EditText
+            android:id="@+id/searchEdit"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="12dp"
+            android:background="@drawable/custom_edit_text"
+            android:drawableLeft="@drawable/drawable_search"
+            android:drawablePadding="10dp"
+            android:hint="Search"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:paddingLeft="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+
+            tools:ignore="MissingConstraints" />
+
+
+        <ImageView
+            android:id="@+id/FilterButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/img_2"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/searchEdit"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="110dp"
+        android:layout_below="@+id/searchbartext"
+        android:layout_marginTop="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/personalcl1"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_below="@+id/searchbartext"
+                android:layout_marginTop="15sp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45sp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="13dp"
+                    android:background="@drawable/personal_background"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="20dp"
+                        android:text="+ INVITE"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="124dp"
+                        android:layout_height="19dp"
+
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Shivani Thakkar"
+                        android:textSize="17dp"
+
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Vadodara , within 6.2 KM"
+                        android:textColor="#807D7D"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView5"
+                        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="120dp"
+                        android:layout_height="13dp"
+                        android:max="100"
+                        android:layout_marginTop="5dp"
+                        android:progress="45"
+                        android:progressDrawable="@drawable/custom_progress_bar"
+                        app:layout_constraintStart_toStartOf="@+id/textView6"
+                        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/img_23"
+                        app:layout_constraintStart_toStartOf="@+id/progressBar"
+                        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="15dp"
+
+                        android:src="@drawable/img_25"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                        app:layout_constraintStart_toEndOf="@+id/imageView4"
+                        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:text="Content Writer | 1 years of experience"
+                        android:textSize="15dp"
+                        android:layout_marginTop="8dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView8"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="299dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+
+                        android:text="Hi community! I am available at your service !"
+                        android:textSize="15dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25sp"
+                    android:background="@drawable/viewholder_pic_background"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ST"
+                        android:textSize="35dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/personalcl2"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_below="@+id/searchbartext"
+                android:layout_marginTop="15sp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45sp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="13dp"
+                    android:background="@drawable/personal_background"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/invitecl2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="20dp"
+                        android:text="+ INVITE"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/namecl2"
+                        android:layout_width="144dp"
+                        android:layout_height="19dp"
+
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Mehajbin Chauhan"
+                        android:textSize="17dp"
+
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/invitecl2" />
+
+                    <TextView
+                        android:id="@+id/citycl2"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Vadodara , within 5.3 KM"
+                        android:textColor="#807D7D"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="@+id/namecl2"
+                        app:layout_constraintTop_toBottomOf="@+id/namecl2" />
+
+
+                    <ProgressBar
+                        android:id="@+id/progressBarcl2"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="120dp"
+                        android:layout_height="13dp"
+                        android:max="100"
+                        android:layout_marginTop="5dp"
+                        android:progress="32"
+                        android:progressDrawable="@drawable/custom_progress_bar"
+                        app:layout_constraintStart_toStartOf="@+id/citycl2"
+                        app:layout_constraintTop_toBottomOf="@+id/citycl2" />
+
+                    <ImageView
+                        android:id="@+id/callcl2"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/img_23"
+                        app:layout_constraintStart_toStartOf="@+id/progressBarcl2"
+                        app:layout_constraintTop_toBottomOf="@+id/progressBarcl2" />
+
+                    <ImageView
+                        android:id="@+id/contactcl2"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="15dp"
+
+                        android:src="@drawable/img_25"
+                        app:layout_constraintBottom_toBottomOf="@+id/callcl2"
+                        app:layout_constraintStart_toEndOf="@+id/callcl2"
+                        app:layout_constraintTop_toTopOf="@+id/callcl2" />
+
+                    <TextView
+                        android:id="@+id/contentcl2"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:text="Content Writer | 5 years of experience"
+                        android:textSize="15dp"
+                        android:layout_marginTop="8dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/communitycl2"
+                        app:layout_constraintTop_toBottomOf="@+id/callcl2" />
+
+                    <TextView
+                        android:id="@+id/communitycl2"
+                        android:layout_width="299dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+
+                        android:text="Hi community! I am available at your service !"
+                        android:textSize="15dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintTop_toBottomOf="@+id/contentcl2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25sp"
+                    android:background="@drawable/viewholder_pic_background"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MC"
+                        android:textSize="35dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/personalcl3"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_below="@+id/searchbartext"
+                android:layout_marginTop="15sp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45sp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="13dp"
+                    android:background="@drawable/personal_background"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/invitecl3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="20dp"
+                        android:text="+ INVITE"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/namecl3"
+                        android:layout_width="124dp"
+                        android:layout_height="19dp"
+
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="10dp"
+                        android:text="The Nakul"
+                        android:textSize="17dp"
+
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/invitecl3" />
+
+                    <TextView
+                        android:id="@+id/citycl3"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Vadodara , within 19.9 KM"
+                        android:textColor="#807D7D"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="@+id/namecl3"
+                        app:layout_constraintTop_toBottomOf="@+id/namecl3" />
+
+
+                    <ProgressBar
+                        android:id="@+id/progressBarcl3"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="120dp"
+                        android:layout_height="13dp"
+                        android:max="100"
+                        android:layout_marginTop="5dp"
+                        android:progress="25"
+                        android:progressDrawable="@drawable/custom_progress_bar"
+                        app:layout_constraintStart_toStartOf="@+id/citycl3"
+                        app:layout_constraintTop_toBottomOf="@+id/citycl3" />
+
+                    <ImageView
+                        android:id="@+id/callcl3"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/img_23"
+                        app:layout_constraintStart_toStartOf="@+id/progressBarcl3"
+                        app:layout_constraintTop_toBottomOf="@+id/progressBarcl3" />
+
+                    <ImageView
+                        android:id="@+id/contactcl3"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="15dp"
+
+                        android:src="@drawable/img_25"
+                        app:layout_constraintBottom_toBottomOf="@+id/callcl3"
+                        app:layout_constraintStart_toEndOf="@+id/callcl3"
+                        app:layout_constraintTop_toTopOf="@+id/callcl3" />
+
+                    <TextView
+                        android:id="@+id/contentcl3"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:text="Content Writer | 3 years of experience"
+                        android:textSize="15dp"
+                        android:layout_marginTop="8dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/communitycl3"
+                        app:layout_constraintTop_toBottomOf="@+id/callcl3" />
+
+                    <TextView
+                        android:id="@+id/communitycl3"
+                        android:layout_width="299dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+
+                        android:text="Hi community! I am available at your service !"
+                        android:textSize="15dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintTop_toBottomOf="@+id/contentcl3" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25sp"
+                    android:background="@drawable/viewholder_pic_background"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TN"
+                        android:textSize="35dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/personalcl4"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_below="@+id/searchbartext"
+                android:layout_marginTop="15sp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45sp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="13dp"
+                    android:background="@drawable/personal_background"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/invitecl4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="20dp"
+                        android:text="+ INVITE"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/namecl4"
+                        android:layout_width="124dp"
+                        android:layout_height="19dp"
+
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Rahul Panchal"
+                        android:textSize="17dp"
+
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/invitecl4" />
+
+                    <TextView
+                        android:id="@+id/citycl4"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Vadodara , within 2 KM"
+                        android:textColor="#807D7D"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="@+id/namecl4"
+                        app:layout_constraintTop_toBottomOf="@+id/namecl4" />
+
+
+                    <ProgressBar
+                        android:id="@+id/progressBarcl4"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="120dp"
+                        android:layout_height="13dp"
+                        android:max="100"
+                        android:layout_marginTop="5dp"
+                        android:progress="58"
+                        android:progressDrawable="@drawable/custom_progress_bar"
+                        app:layout_constraintStart_toStartOf="@+id/citycl4"
+                        app:layout_constraintTop_toBottomOf="@+id/citycl4" />
+
+                    <ImageView
+                        android:id="@+id/callcl4"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/img_23"
+                        app:layout_constraintStart_toStartOf="@+id/progressBarcl4"
+                        app:layout_constraintTop_toBottomOf="@+id/progressBarcl4" />
+
+                    <ImageView
+                        android:id="@+id/contactcl4"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="15dp"
+
+                        android:src="@drawable/img_25"
+                        app:layout_constraintBottom_toBottomOf="@+id/callcl4"
+                        app:layout_constraintStart_toEndOf="@+id/callcl4"
+                        app:layout_constraintTop_toTopOf="@+id/callcl4" />
+
+                    <TextView
+                        android:id="@+id/contentcl4"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:text="Content Writer | 10 years of experience"
+                        android:textSize="15dp"
+                        android:layout_marginTop="8dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/communitycl4"
+                        app:layout_constraintTop_toBottomOf="@+id/callcl4" />
+
+                    <TextView
+                        android:id="@+id/communitycl4"
+                        android:layout_width="299dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+
+                        android:text="Hi community! I am available at your service !"
+                        android:textSize="15dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintTop_toBottomOf="@+id/contentcl4" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25sp"
+                    android:background="@drawable/viewholder_pic_background"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RP"
+                        android:textSize="35dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/personalcl5"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_below="@+id/searchbartext"
+                android:layout_marginTop="15sp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45sp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="13dp"
+                    android:background="@drawable/personal_background"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/invitecl5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="20dp"
+                        android:text="+ INVITE"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/namecl5"
+                        android:layout_width="124dp"
+                        android:layout_height="19dp"
+
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Darsh Patel"
+                        android:textSize="17dp"
+
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/invitecl5" />
+
+                    <TextView
+                        android:id="@+id/citycl5"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Vadodara , within 9.91 KM"
+                        android:textColor="#807D7D"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="@+id/namecl5"
+                        app:layout_constraintTop_toBottomOf="@+id/namecl5" />
+
+
+                    <ProgressBar
+                        android:id="@+id/progressBarcl5"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="120dp"
+                        android:layout_height="13dp"
+                        android:max="100"
+                        android:layout_marginTop="5dp"
+                        android:progress="60"
+                        android:progressDrawable="@drawable/custom_progress_bar"
+                        app:layout_constraintStart_toStartOf="@+id/citycl5"
+                        app:layout_constraintTop_toBottomOf="@+id/citycl5" />
+
+                    <ImageView
+                        android:id="@+id/callcl5"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/img_23"
+                        app:layout_constraintStart_toStartOf="@+id/progressBarcl5"
+                        app:layout_constraintTop_toBottomOf="@+id/progressBarcl5" />
+
+                    <ImageView
+                        android:id="@+id/contactcl5"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="15dp"
+
+                        android:src="@drawable/img_25"
+                        app:layout_constraintBottom_toBottomOf="@+id/callcl5"
+                        app:layout_constraintStart_toEndOf="@+id/callcl5"
+                        app:layout_constraintTop_toTopOf="@+id/callcl5" />
+
+                    <TextView
+                        android:id="@+id/contentcl5"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:text="Content Writer | 2 years of experience"
+                        android:textSize="15dp"
+                        android:layout_marginTop="8dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/communitycl5"
+                        app:layout_constraintTop_toBottomOf="@+id/callcl5" />
+
+                    <TextView
+                        android:id="@+id/communitycl5"
+                        android:layout_width="299dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+
+                        android:text="Hi community! I am available at your service !"
+                        android:textSize="15dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintTop_toBottomOf="@+id/contentcl5" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25sp"
+                    android:background="@drawable/viewholder_pic_background"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DP"
+                        android:textSize="35dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/scrollView3"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        app:fab_addButtonColorPressed="@color/statusbar"
+        app:fab_addButtonColorNormal="@color/statusbar"
+        app:fab_labelStyle="@style/FloatStyle"
+        app:fab_expandDirection="up"
+        app:fab_labelsPosition="left" >
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#E1AF30"
+            app:fab_icon="@drawable/img_9"
+            app:fab_size="mini"
+            app:fab_title="Dating"
+            />
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#E1AF30"
+            app:fab_icon="@drawable/img_10"
+            app:fab_size="mini"
+            app:fab_title="Matrimony"
+            />
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#E1AF30"
+            app:fab_icon="@drawable/img_11"
+            app:fab_size="mini"
+            app:fab_title="Buy-Sell-Rent"
+            />
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#E1AF30"
+            app:fab_icon="@drawable/img_13"
+            app:fab_size="mini"
+            app:fab_title="Business Cards"
+            />
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#E1AF30"
+            app:fab_icon="@drawable/img_14"
+            app:fab_size="mini"
+            app:fab_title="NetClan Groups"
+            />
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#E1AF30"
+            app:fab_icon="@drawable/img_12"
+            app:fab_size="mini"
+            app:fab_title="Jobs"
+            />
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#E1AF30"
+            app:fab_icon="@drawable/img_15"
+            app:fab_size="mini"
+            app:fab_title="Notes"
+            />
+
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+</RelativeLayout>

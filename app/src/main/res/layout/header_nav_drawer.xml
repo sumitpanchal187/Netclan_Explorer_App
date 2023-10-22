@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/img_22"
+        android:layout_height="250dp"
+        android:gravity="bottom"
+        >
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+
+            android:src="@drawable/img_18"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView13"
+            app:layout_constraintStart_toStartOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sumit Panchal "
+            android:textColor="@color/White"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/idnavigation"
+            app:layout_constraintStart_toStartOf="@+id/idnavigation" />
+        <TextView
+            android:id="@+id/idnavigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SSVADO0004000 "
+            android:textColor="@color/White"
+            android:textSize="17dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar"
+            app:layout_constraintStart_toStartOf="@+id/progressBar" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="120dp"
+            android:layout_height="13dp"
+            android:max="100"
+            android:progress="25"
+            android:layout_marginBottom="5dp"
+            android:progressDrawable="@drawable/custom_progress_bar"
+
+            app:layout_constraintBottom_toTopOf="@+id/emailnavigation"
+            app:layout_constraintStart_toStartOf="@+id/emailnavigation" />
+
+        <TextView
+            android:id="@+id/emailnavigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Available"
+            android:textColor="@color/White"
+            android:textSize="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
